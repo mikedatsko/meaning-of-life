@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 export default class SocialShare extends Component {
   constructor(props) {
@@ -9,11 +10,10 @@ export default class SocialShare extends Component {
 
   render() {
     return (
-      <div>
+      <div className="social-sharing">
         <a
-          href="https://www.facebook.com/sharer/sharer.php?app_id=143455512882934&kid_directed_site=0&u=https%3A%2F%2Fmeaningoflife.herokuapp.com%2Findex.html&display=popup&ref=plugin&src=share_button"
+          href="javascript:void(0)"
           className="button"
-          target="_blank"
         >
           <span className="icon-facebook"></span>
         </a>
@@ -25,6 +25,16 @@ export default class SocialShare extends Component {
         >
           <span className="icon-twitter"></span>
         </a>
+
+        <iframe
+          id="social-sharing-fb-iframe"
+          src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmeaningoflife.herokuapp.com%2Findex.html&layout=button&size=large&mobile_iframe=true&appId=143455512882934&width=115&height=28"
+          width="30"
+          height="30"
+          scrolling="no"
+          allowTransparency="true"
+        >
+        </iframe>
       </div>
     )
   }

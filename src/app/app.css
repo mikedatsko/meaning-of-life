@@ -460,6 +460,22 @@
   background: rgba(0,0,0,0.2) url('../images/clock2.svg') no-repeat 50% 50%;
 }
 
+.social-sharing {
+  position: relative;
+}
+
+.social-sharing #social-sharing-fb-iframe {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  left: 10px;
+  top: 6px;
+  z-index: 1;
+  border-radius: 25px;
+}
+
 .social-share-twitter {
   position: fixed;
   left: 380px;
