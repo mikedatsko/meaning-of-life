@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Store } from '../../services';
+import SocialShare from '../social-share/social-share';
 
 export default class Filter extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class Filter extends Component {
       <div className="filter">
         <button
           type="button"
+          className="button"
           title="Most liked"
           onClick={(e) => this.handleFilter('likes')}
         >
@@ -27,6 +29,7 @@ export default class Filter extends Component {
 
         <button
           type="button"
+          className="button"
           title="Most disliked"
           onClick={(e) => this.handleFilter('dislikes')}
         >
@@ -38,6 +41,7 @@ export default class Filter extends Component {
 
         <button
           type="button"
+          className="button"
           title="Most controversial"
           onClick={(e) => this.handleFilter('contr')}
         >
@@ -46,6 +50,8 @@ export default class Filter extends Component {
           >
           </span>
         </button>
+
+        <SocialShare />
       </div>
     )
   }

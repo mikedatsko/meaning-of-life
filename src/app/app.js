@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Http } from './services';
 import MeaningsList from './components/meanings-list/meanings-list';
 import AddMeaningForm from './components/add-meaning-form/add-meaning-form';
-import SocialShare from './components/social-share/social-share';
 import './app.css';
 
 export default class App extends Component {
@@ -27,7 +26,7 @@ export default class App extends Component {
         </a>
 
         <a
-          href="https://www.reactriot.com/team"
+          href="https://www.reactriot.com/entries/324-redsocks/vote"
           target="_blank"
           className="logo"
         >
@@ -39,7 +38,6 @@ export default class App extends Component {
 
         <AddMeaningForm />
         <MeaningsList />
-        <SocialShare />
       </div>
     )
   }

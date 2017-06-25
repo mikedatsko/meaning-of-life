@@ -23,7 +23,7 @@ export default class AddMeaningForm extends Component {
         >
         </div>
 
-        <span className="label">What is Your meaning of life?</span>
+        <span className="label">What is the meaning of your life?</span>
         <span className="meanings-limit" data-limit={this.state.maxMeanings}>
           You may leave <strong>{this.state.maxMeanings}</strong> meanings
         </span>

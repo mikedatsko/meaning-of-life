@@ -10,24 +10,21 @@ export default class SocialShare extends Component {
   render() {
     return (
       <div>
-        <iframe
-          src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=https://meaningoflife.herokuapp.com&via=mykhailo.datsko&related=twitterapi%2Ctwitter&text=Meaning of Life for ReactRiot Hackaton&hashtags=reactriot"
-          width="140"
-          height="28"
-          title="Twitter Tweet Button"
-          className="social-share-twitter"
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A//meaningoflife.herokuapp.com"
+          className="button"
+          target="_blank"
         >
-        </iframe>
+          <span className="icon-facebook"></span>
+        </a>
 
-        <iframe
-          src="https://www.facebook.com/plugins/like.php?href=https://meaningoflife.herokuapp.com&width=248&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId=143455512882934"
-          width="248"
-          height="46"
-          scrolling="no"
-          allowTransparency="true"
-          className="social-share-facebook"
+        <a
+          href="https://twitter.com/intent/tweet?hashtags=reactriot&original_referer=https%3A//meaningoflife.herokuapp.com&ref_src=twsrc%5Etfw&related=twitterapi%2Ctwitter&text=Meaning of Life&tw_p=tweetbutton&url=https%3A//meaningoflife.herokuapp.com&via=mykhailodatsko"
+          className="button"
+          target="_blank"
         >
-        </iframe>
+          <span className="icon-twitter"></span>
+        </a>
       </div>
     )
   }

@@ -9,7 +9,7 @@
   top: 0;
   height: 40px;
   width: 100%;
-  background: #ccc;
+  background: #000;
 }
 
 .logo-redsocks,
@@ -121,7 +121,7 @@
   width: 100%;
   left: 0;
   top: 40px;
-  background: #ddd;
+  background: rgba(0,0,0,0.05);
   padding: 10px 0;
   margin: 0;
   height: 50px;
@@ -182,55 +182,57 @@
   display: block;
   padding: 0px 10px;
   width: 160px;
+  height: 40px;
+  line-height: 40px;
   position: fixed;
   top: 0px;
   left: 50%;
   margin: 0 0 0 -90px;
-  color: #333;
+  color: #fff;
 }
 
 .meaning-form .meanings-limit[data-limit="10"] {
-  background: rgba(0,210,0,0.3);
+  background: rgba(0,210,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="9"] {
-  background: rgba(50,220,0,0.3);
+  background: rgba(50,220,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="8"] {
-  background: rgba(100,230,0,0.3);
+  background: rgba(100,230,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="7"] {
-  background: rgba(150,240,0,0.3);
+  background: rgba(150,240,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="6"] {
-  background: rgba(200,250,0,0.3);
+  background: rgba(200,250,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="5"] {
-  background: rgba(255,255,0,0.3);
+  background: rgba(255,255,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="4"] {
-  background: rgba(255,200,0,0.3);
+  background: rgba(255,200,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="3"] {
-  background: rgba(255,150,0,0.3);
+  background: rgba(255,150,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="2"] {
-  background: rgba(255,100,0,0.3);
+  background: rgba(255,100,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="1"] {
-  background: rgba(255,50,0,0.3);
+  background: rgba(255,50,0,0.8);
 }
 
 .meaning-form .meanings-limit[data-limit="0"] {
-  background: rgba(255,0,0,0.3);
+  background: rgba(255,0,0,0.8);
 }
 
 @keyframes app-logo-title {
@@ -260,7 +262,6 @@
   width: 100%;
   overflow: auto;
   left: 0%;
-  background: #eee;
 }
 
 .meanings table {
@@ -339,15 +340,16 @@
 
 .filter {
   display: block;
-  height: 120px;
+  height: 200px;
   position: fixed;
   right: 0;
-  top: 110px;
+  top: 50%;
   width: 50px;
   z-index: 2;
+  margin-top: -100px;
 }
 
-.filter button {
+.filter .button {
   border: 0px solid #999;
   border-radius: 100%;
   margin: 5px 10px;
@@ -361,19 +363,24 @@
   position: relative;
 }
 
-.filter button span,
-.filter button:hover span,
-.filter button:active span {
+.filter .button span,
+.filter .button:hover span,
+.filter .button:active span {
   position: relative;
   z-index: 1;
   color: #fff;
 }
 
-.filter button:nth-child(2) {
+.filter .button:nth-child(2) {
   background: #F44336;
 }
 
-.filter button:nth-child(3):before {
+.filter a.button {
+  background: #999!important;
+  line-height: 32px;
+}
+
+.filter .button:nth-child(3):before {
   content: '';
   position: absolute;
   width: 50%;
@@ -385,7 +392,7 @@
   z-index: 0;
 }
 
-.filter button:after {
+.filter .button:after {
   content: '';
   position: absolute;
   height: 30px;
@@ -401,20 +408,28 @@
   transition: right 0.2s ease-out;
 }
 
-.filter:hover button:after {
+.filter:hover .button:after {
   right: 40px;
 }
 
-.filter button:nth-child(1):after {
+.filter .button:nth-child(1):after {
   content: 'Most liked';
 }
 
-.filter button:nth-child(2):after {
+.filter .button:nth-child(2):after {
   content: 'Most disliked';
 }
 
-.filter button:nth-child(3):after {
+.filter .button:nth-child(3):after {
   content: 'Most controversial';
+}
+
+.filter a.button:nth-child(1):after {
+  content: 'Share via Facebook';
+}
+
+.filter a.button:nth-child(2):after {
+  content: 'Share via Twitter';
 }
 
 
