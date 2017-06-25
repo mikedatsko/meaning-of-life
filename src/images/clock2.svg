@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50px"
+   height="50px"
+   viewBox="0 0 100 100"
+   preserveAspectRatio="xMidYMid"
+   class="uil-clock"
+   id="svg4311"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="clock2.svg">
+  <metadata
+     id="metadata4325">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4323" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="691"
+     inkscape:window-height="480"
+     id="namedview4321"
+     showgrid="false"
+     inkscape:zoom="4.72"
+     inkscape:cx="25"
+     inkscape:cy="25"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4311" />
+  <rect
+     x="0"
+     y="0"
+     width="100"
+     height="100"
+     fill="none"
+     class="bk"
+     id="rect4313" />
+  <circle
+     cx="50"
+     cy="50"
+     r="30"
+     fill="#ffffff"
+     stroke="#ba2b2b"
+     stroke-width="8px"
+     id="circle4315" />
+  <line
+     x1="50"
+     y1="50"
+     x2="50"
+     y2="30"
+     stroke="#000"
+     stroke-width="5"
+     stroke-linecap="round"
+     id="line4317">
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 50 50"
+       to="360 50 50"
+       dur="5s"
+       repeatCount="indefinite" />
+  </line>
+  <line
+     x1="50"
+     y1="50"
+     x2="50"
+     y2="20"
+     stroke="#f00"
+     stroke-width="2"
+     stroke-linecap="round"
+     opacity="1"
+     id="line4319">
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 50 50"
+       to="360 50 50"
+       dur="1s"
+       repeatCount="indefinite" />
+  </line>
+</svg>
