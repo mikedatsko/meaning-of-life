@@ -10,11 +10,6 @@ export default class AddMeaningForm extends Component {
       isErrorEmpty: false,
       maxMeanings: 10
     };
-
-    Store.subscribe('maxMeanings', maxMeanings => {
-      console.log(maxMeanings);
-      this.setState({maxMeanings: maxMeanings});
-    });
   }
 
   // React methods
@@ -56,6 +51,12 @@ export default class AddMeaningForm extends Component {
     )
   }
 
+  componentDidMount() {
+    Store.subscribe('maxMeanings', maxMeanings => {
+      this.setState({maxMeanings: maxMeanings});
+    });
+  }
+
   // Other methods
 
   handleChange(event) {
@@ -81,8 +82,6 @@ export default class AddMeaningForm extends Component {
 
     Http.createMeaning(meaning).then(response => {
       this.setState({isSending: false});
-
-      console.log(response);
 
       if (response.status === 201) {
         Store.set('newMeaning', response.data.obj);

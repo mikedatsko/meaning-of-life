@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Meaning from '../meaning/meaning';
+import Filter from '../filter/filter';
 import { Http, Store } from '../../services';
 import $ from 'jquery';
 
@@ -8,28 +9,8 @@ export default class MeaningsList extends Component {
     super(props);
     this.state = {
       meanings: [],
-      filter: 'likes',
       isLoading: true
     };
-
-    Store.set('filter', this.state.filter);
-
-    Store.subscribe('newMeaning', newMeaning => {
-      this.getMeanings(() => {
-        const $meaningsEl = $('#meanings');
-        const $meaningEl = $(`#row_${newMeaning._id}`);
-
-        $meaningEl.addClass('blink');
-
-        const scrollTop = $meaningsEl.scrollTop() + $meaningEl.position().top;
-
-        $meaningsEl.animate({scrollTop: scrollTop + 'px'}, 1000, () => {
-          setTimeout(() => {
-            $meaningEl.removeClass('blink');
-          }, 3000);
-        });
-      });
-    })
   }
 
   // React methods
@@ -52,40 +33,8 @@ export default class MeaningsList extends Component {
         >
         </div>
 
-        <div className="filter">
-          <button
-            type="button"
-            title="Most liked"
-            onClick={(e) => this.handleFilter('likes')}
-          >
-            <span
-              className={this.state.filter === 'likes' ? 'icon-check-circle' : 'icon-circle'}
-            >
-            </span>
-          </button>
+        <Filter />
 
-          <button
-            type="button"
-            title="Most disliked"
-            onClick={(e) => this.handleFilter('dislikes')}
-          >
-            <span
-              className={this.state.filter === 'dislikes' ? 'icon-check-circle' : 'icon-circle'}
-            >
-            </span>
-          </button>
-
-          <button
-            type="button"
-            title="Most controversial"
-            onClick={(e) => this.handleFilter('contr')}
-          >
-            <span
-              className={this.state.filter === 'contr' ? 'icon-check-circle' : 'icon-circle'}
-            >
-            </span>
-          </button>
-        </div>
         <table>
           <tbody>
             {meaningsPrepared}
@@ -97,6 +46,27 @@ export default class MeaningsList extends Component {
 
   componentDidMount() {
     this.getMeanings();
+
+    Store.subscribe('newMeaning', newMeaning => {
+      this.getMeanings(() => {
+        const $meaningsEl = $('#meanings');
+        const $meaningEl = $(`#row_${newMeaning._id}`);
+
+        $meaningEl.addClass('blink');
+
+        const scrollTop = $meaningsEl.scrollTop() + $meaningEl.position().top;
+
+        $meaningsEl.animate({scrollTop: scrollTop + 'px'}, 1000, () => {
+          setTimeout(() => {
+            $meaningEl.removeClass('blink');
+          }, 3000);
+        });
+      });
+    });
+
+    Store.subscribe('filter', filter => {
+      this.getMeanings();
+    });
   }
 
   // Other methods
@@ -118,12 +88,6 @@ export default class MeaningsList extends Component {
   }
 
   handleSubmit(response) {
-    this.getMeanings();
-  }
-
-  handleFilter(filterValue) {
-    this.setState({filter: filterValue});
-    Store.set('filter', filterValue);
     this.getMeanings();
   }
 

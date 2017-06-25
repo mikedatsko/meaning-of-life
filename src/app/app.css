@@ -269,8 +269,8 @@
   margin: 0 auto;
 }
 
-.meanings table tr {
-  
+.meanings table tr:nth-child(2n+1) {
+  background: rgba(0,0,0,0.03);
 }
 
 .meanings table tr td {
@@ -361,9 +361,12 @@
   position: relative;
 }
 
-.filter button span {
+.filter button span,
+.filter button:hover span,
+.filter button:active span {
   position: relative;
   z-index: 1;
+  color: #fff;
 }
 
 .filter button:nth-child(2) {

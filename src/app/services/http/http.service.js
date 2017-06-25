@@ -6,9 +6,6 @@ const api = 'api';
 
 class HttpService {
   constructor() {
-    Store.subscribe('filter', (filter) => {
-      this.filter = filter;
-    });
   }
 
   createMeaning(name) {
@@ -28,7 +25,9 @@ class HttpService {
   }
 
   getMeanings() {
-    return axios.get(`${host}/${api}/meaning/${this.filter}`)
+    const filter = Store.get('filter');
+
+    return axios.get(`${host}/${api}/meaning/${filter}`)
     .then(response => {
       let meanings = []
       if (response.status === 200) {
