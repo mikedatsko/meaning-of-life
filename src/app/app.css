@@ -423,19 +423,19 @@
   content: 'Most controversial';
 }
 
-.filter a.button:nth-child(1):after {
+.filter a.button:nth-child(2):after {
   content: 'Share via Facebook';
 }
 
-.filter a.button:nth-child(2):after {
+.filter a.button:nth-child(1):after {
   content: 'Share via Twitter';
 }
 
-.filter a.button:nth-child(1) {
+.filter a.button:nth-child(2) {
   background: #4267B2;
 }
 
-.filter a.button:nth-child(2) {
+.filter a.button:nth-child(1) {
   background: #4AB3F4;
 }
 
