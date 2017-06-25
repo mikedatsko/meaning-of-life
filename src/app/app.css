@@ -376,7 +376,6 @@
 }
 
 .filter a.button {
-  background: #999!important;
   line-height: 32px;
 }
 
@@ -430,6 +429,14 @@
 
 .filter a.button:nth-child(2):after {
   content: 'Share via Twitter';
+}
+
+.filter a.button:nth-child(1) {
+  background: #4267B2;
+}
+
+.filter a.button:nth-child(2) {
+  background: #4AB3F4;
 }
 
 
