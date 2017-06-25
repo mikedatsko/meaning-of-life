@@ -438,4 +438,18 @@
   background: rgba(0,0,0,0.2) url('../images/clock2.svg') no-repeat 50% 50%;
 }
 
+.social-share-twitter {
+  position: fixed;
+  left: 380px;
+  top: 6px;
+  border: none;
+  background: none;
+}
 
+.social-share-facebook {
+  position: fixed;
+  right: 200px;
+  top: 6px;
+  border: none;
+  background: none;
+}
